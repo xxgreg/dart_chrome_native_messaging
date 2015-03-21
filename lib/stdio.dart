@@ -21,11 +21,12 @@ class StdioJsonChannel implements JsonChannel {
   /// Return an object deserialised from json.
   final Stream<Object> onMessage;
 
+  //TODO would be nice to return a future from stdout.flush(). This is actually hard to implement without
+  // making things crashy, as flush cannot be called concurrently.
   /// The argument must be a data structure containing only the types List, Map, String, num, or bool.
-  Future send(Object json) {
+  void send(Object json) {
     var bytes = encodeJsonMessage(json);
     stdout.add(bytes);
-    return stdout.flush();
   }
 
   /// It is safe to call close on an already closed channel.

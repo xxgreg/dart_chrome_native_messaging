@@ -29,9 +29,8 @@ class ChromeAppJsonChannel implements JsonChannel {
   Stream<Object> get onMessage => _onMessage.stream;
 
   /// The argument must be a data structure containing only the types List, Map, String, num, or bool.
-  Future send(Object json) {
+  void send(Object json) {
     _port.postMessage(json);
-    return new Future.value();
   }
 
   /// It is safe to call close on an already closed channel.

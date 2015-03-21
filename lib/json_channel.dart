@@ -6,7 +6,7 @@ library chrome_native_messaging;
 import 'dart:async';
 
 abstract class JsonChannel {
-  Future send(Object json);
+  void send(Object json);
   Stream<Object> get onMessage;
   void close();
 }
