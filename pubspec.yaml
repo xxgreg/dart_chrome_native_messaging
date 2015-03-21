@@ -2,7 +2,7 @@ name: chrome_native_messaging
 description: Supports connecting from a Chrome App to a Dart program running on the native host OS.
 version: 0.0.1
 author: greg@v7.nz
-homepage: https://gihub.com/xxgreg/chrome_native_messaging
+homepage: https://gihub.com/xxgreg/dart_chrome_native_messaging
 dependencies:
   chrome: any
 dev_dependencies:
